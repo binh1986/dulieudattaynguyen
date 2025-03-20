@@ -85,7 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const geojsonFile = selectedHuyen.toLowerCase() + ".geojson";
             const sourceId = selectedHuyen.toLowerCase();
             const layerId = sourceId + "-layer";
-
+            // Dừng việc theo dõi vị trí của người dùng
+            if (geolocate._watchState === "ACTIVE_LOCK") {
+            geolocate._clearWatch();  // Ngừng theo dõi vị trí người dùng
+            }
             // Xóa các source/layer cũ trước khi thêm mới
             huyenRadios.forEach(r => {
                 const oldSourceId = r.value.toLowerCase();
