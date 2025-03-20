@@ -1,0 +1,101 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; 
+}
+.container-fluid{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+#map {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    position:absolute;
+    z-index: 1;
+}
+/*danhsach tỉnh huyện*/
+.sidebar{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: auto;
+    background: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/*MỚI taynguyen*/
+.taynguyen-item{
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+.taynguyen-item:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+/* tinh*/
+.tinh-list {
+    display: none;
+    margin-top: 5px;
+    padding-left: 10px;
+    border-left: 2px solid #007bff;
+    transition: max-height 0.3s ease-in-out;
+}
+.tinh-item {
+    background-color: #007bff;
+    color: white;
+    padding: 8px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+.tinh-item:hover {
+    background-color: #0056b3;
+}
+/*huyện*/
+.huyen-item{
+    background-color: #648ce2;
+    color: white;
+    padding: 8px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+.huyen-item:hover{
+    background-color: #4777e14c;
+}
+.huyen-list{
+    display: none;
+    margin-top: 5px;
+    padding-left: 10px;
+    border-left: 2px solid #f0f0ee;
+    transition: max-height 0.3s ease-in-out;
+    
+}
+.huyen-item.bi{
+    font-size:large;
+    color: black;
+}
+.huyen-item.selected.bi{
+    color: green;
+}
