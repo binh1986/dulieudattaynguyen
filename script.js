@@ -17,14 +17,18 @@ map.on('load', function () {
 // Thêm điều khiển định vị GPS
 const geolocate = new mapboxgl.GeolocateControl({
     positionOptions: { enableHighAccuracy: true },
-    trackUserLocation: true,
-    showUserHeading: true
+    trackUserLocation: false,
+    showUserHeading: false
 });
 map.addControl(geolocate, 'top-right');
+// cố đinh gps
+    geolocate.trigger();
 
 // Khi người dùng nhấn vào "Vị trí của tôi", hiển thị thông tin ngay tại vị trí định vị
+let userPopup =null; // khai báo biến toàn cục để quản lý Pupup
 geolocate.on('geolocate', function (e) {
     const userCoords = [e.coords.longitude, e.coords.latitude];
+    // xóa Pupup cũ nếu tồn tại
 
     new mapboxgl.Popup()
         .setLngLat(userCoords) // Vị trí định vị
