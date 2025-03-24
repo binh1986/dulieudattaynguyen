@@ -14,10 +14,26 @@
     <link rel="stylesheet" href="style.css">
     <!-- liên kết với scrips-->
 </head>
+<style>
+</style>
 <body>
     <div class="container-fluid">
     <!--chứa bản đồ-->
     <div id="map"></div>
+    <!--ten bảng quyen-->
+    <div id="copyright" style="
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    text-align: center; 
+    padding: 5px; 
+    background-color: white; 
+    font-size: 12px; 
+    color: gray; 
+    z-index: 9999;">
+    © 2025 Trung tâm Nghiên cứu Đất, Phân bón và Môi trường Tây Nguyên
+</div> 
     <!--thanh chọn tỉnh-->
     <div class="sidebar">
         <!-- Danh sách tỉnh -->
@@ -27,18 +43,6 @@
                 <div class="huyen-list" id="daklak" style="display: none;">
                     <div class="huyen-item"><input type="radio" name="huyen" value="Krongpak" class="huyen-radio"> Krông Pắk</div>
                     <div class="huyen-item"><input type="radio" name="huyen" value="Eakar" class="huyen-radio"> Ea Kar</div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Buonho" class="huyen-radio"> Buôn Hồ</div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Cukuin" class="huyen-radio"> Cư Kuin</div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Cumgar" class="huyen-radio"> Cư M'Gar></div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Eahleo" class="huyen-radio"> Ea H'leo</div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Easup" class="huyen-radio">Ea Súp</div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Krongana" class="huyen-radio">Krông Ana</div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Krongbong" class="huyen-radio">Krông Bông</div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Krongbuk" class="huyen-radio">Krông Búk</div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Krongnang" class="huyen-radio">Krông Năng</div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Lak" class="huyen-radio">Lắk</div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Mdrak" class="huyen-radio">M'Đrắk</div>
-                    <div class="huyen-item"><input type="radio" name="huyen" value="Buommathuot" class="huyen-radio" > Buôn Ma Thuột</div>
                 </div>
                 <!-- tỉnh gia lai kon tum-->
             <div class="tinh-item" onclick="togglegialaikontum('gialaikontum')">GIA LAI - KON TUM</div>
