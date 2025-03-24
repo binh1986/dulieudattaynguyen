@@ -69,15 +69,7 @@ function toggledaklakList(id) {
     }
 }
 
-// Ẩn danh sách khi click ra ngoài sidebar
-document.addEventListener("click", function (event) {
-    let isClickInside = document.querySelector(".sidebar").contains(event.target);
-    if (!isClickInside) {
-        document.querySelectorAll(".tinh-list, .huyen-list").forEach(menu => {
-            menu.style.display = "none";
-        });
-    }
-});
+
 // Ẩn danh sách khi click ra ngoài sidebar
 function hideLists() {
     document.querySelectorAll('.tinh-list, .huyen-list').forEach(menu => {
@@ -89,8 +81,6 @@ document.addEventListener('click', function (event) {
     if (!isClickInside) hideLists();
 });
 
-// Sau 3 giây sẽ thu lại toàn bộ danh sách
-setTimeout(hideLists, 3000);
 const colorMap = {
     'Krongpak': '#FF5733',
     'Eakar': '#33FF57'
@@ -139,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         type: "fill",
                         source: sourceId,
                         paint: {
-                            "fill-color": "#" + Math.floor(Math.random() * 16777215).toString(16),
+                            "fill-color": colorMap[selectedHuyen] || "#888888",
                             "fill-opacity": 0.5
                         }
                     });
@@ -167,6 +157,19 @@ map.on("click", function (e) {
         `)
         .addTo(map);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
