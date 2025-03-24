@@ -78,6 +78,19 @@ document.addEventListener("click", function (event) {
         });
     }
 });
+// Ẩn danh sách khi click ra ngoài sidebar
+function hideLists() {
+    document.querySelectorAll('.tinh-list, .huyen-list').forEach(menu => {
+        menu.style.display = 'none';
+    });
+}
+document.addEventListener('click', function (event) {
+    let isClickInside = document.querySelector('.sidebar')?.contains(event.target);
+    if (!isClickInside) hideLists();
+});
+
+// Sau 3 giây sẽ thu lại toàn bộ danh sách
+setTimeout(hideLists, 3000);
 const colorMap = {
     'Krongpak': '#FF5733',
     'Eakar': '#33FF57'
