@@ -82,8 +82,8 @@ document.addEventListener('click', function (event) {
 });
 
 const colorMap = {
-    'Krongpak': '#FF5733',
-    'Eakar': '#33FF57'
+    'krongpak': '#FF5733',
+    'eakar': '#33FF57'
 };
 
 // Xử lý sự kiện chọn huyện và tải GeoJSON
